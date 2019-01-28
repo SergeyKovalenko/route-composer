@@ -61,9 +61,9 @@ class FactoryTest: XCTestCase {
         class TestFactory: Factory {
 
             typealias ViewController = UIViewController
-            
+
             typealias Context = Any?
-            
+
             var prepareBlock: () -> Void
 
             var buildBlock: () -> Void

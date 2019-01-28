@@ -57,7 +57,7 @@ class RouterTests: XCTestCase {
     struct TestViewControllerFactory: Factory {
 
         typealias ViewController = TestViewController
-        
+
         typealias Context = Any?
 
         func build(with context: Any?) throws -> TestViewController {
@@ -70,9 +70,9 @@ class RouterTests: XCTestCase {
     struct TestViewControllerBrokenFactory: Factory {
 
         typealias ViewController = TestViewController
-        
+
         typealias Context = Any?
-        
+
         func build(with context: Any?) throws -> TestViewController {
             throw RoutingError.generic(RoutingError.Context("Some error occurred"))
         }

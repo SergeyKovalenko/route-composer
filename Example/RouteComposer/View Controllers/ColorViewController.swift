@@ -9,10 +9,6 @@ import RouteComposer
 
 class ColorViewControllerFinder: StackIteratingFinder {
 
-    typealias ViewController = ColorViewController
-    
-    typealias Context = String
-
     public let iterator: StackIterator = DefaultStackIterator(options: .currentAllStack)
 
     func isTarget(_ viewController: ColorViewController, with colorHex: String) -> Bool {
@@ -25,9 +21,8 @@ class ColorViewControllerFinder: StackIteratingFinder {
 class ColorViewControllerFactory: Factory {
 
     typealias ViewController = ColorViewController
-    
+
     typealias Context = String
-    
 
     init() {
     }

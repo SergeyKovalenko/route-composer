@@ -8,11 +8,11 @@ import UIKit
 @testable import RouteComposer
 
 struct EmptyContainer: SimpleContainerFactory {
-    
+
     typealias ViewController = UINavigationController
-    
+
     typealias Context = Any?
-    
+
     init() {
     }
 
