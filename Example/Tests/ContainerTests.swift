@@ -83,6 +83,10 @@ class ContainerTests: XCTestCase {
 
         class EmptyFactory: Factory {
 
+            typealias ViewController = UIViewController
+            
+            typealias Context = Any?
+
             var prepareCount = 0
 
             init() {
@@ -118,6 +122,10 @@ class ContainerTests: XCTestCase {
 
         class TestFactory: ContainerFactory {
 
+            typealias ViewController = UINavigationController
+            
+            typealias Context = Any?
+            
             var prepareBlock: () -> Void
 
             var buildBlock: () -> Void

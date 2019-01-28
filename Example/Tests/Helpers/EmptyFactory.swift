@@ -9,6 +9,10 @@ import UIKit
 
 struct EmptyFactory: Factory {
 
+    typealias ViewController = UIViewController
+    
+    typealias Context = Any?
+
     init() {
     }
 

@@ -56,6 +56,10 @@ class RouterTests: XCTestCase {
     // Factory that produces TestViewController
     struct TestViewControllerFactory: Factory {
 
+        typealias ViewController = TestViewController
+        
+        typealias Context = Any?
+
         func build(with context: Any?) throws -> TestViewController {
             return TestViewController()
         }
@@ -65,6 +69,10 @@ class RouterTests: XCTestCase {
     // Factory that suppose to produce `TestViewController` but fails
     struct TestViewControllerBrokenFactory: Factory {
 
+        typealias ViewController = TestViewController
+        
+        typealias Context = Any?
+        
         func build(with context: Any?) throws -> TestViewController {
             throw RoutingError.generic(RoutingError.Context("Some error occurred"))
         }

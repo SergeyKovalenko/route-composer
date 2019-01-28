@@ -19,7 +19,7 @@ class ExampleNavigationController: UINavigationController {
 }
 
 struct ExampleNavigationFactory<C>: SimpleContainerFactory {
-
+    
     func build(with context: C, integrating viewControllers: [UIViewController]) throws -> ExampleNavigationController {
         guard !viewControllers.isEmpty else {
             throw RoutingError.compositionFailed(RoutingError.Context("Unable to build UINavigationController due to 0 amount " +
